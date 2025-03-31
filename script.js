@@ -1,4 +1,4 @@
-const imagePairs = ["image1.jpg", "image2.jpg", "image3.jpg"]; // List all file names
+const imagePairs = ["1.jpg", "2.jpg", "3.jpg"]; // List all file names
 
 let correctAnswer = "";
 
