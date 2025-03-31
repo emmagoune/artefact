@@ -2,9 +2,9 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    text-align: center;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 header {
@@ -20,21 +20,39 @@ h1 {
 .comparison-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.image-choice {
+    width: 20vw; /* 1/5 of the screen width */
+    height: auto; /* Keep aspect ratio */
+    max-height: 50vh; /* Limit max height */
+    object-fit: contain;
+    border: 3px solid #333;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.image-choice:hover {
+    border-color: #ff5722;
+    transform: scale(1.05);
+}
+
+#result {
+    font-size: 1.5em;
     margin-top: 20px;
 }
 
-.item {
-    margin: 0 10px;
-    text-align: center;
-}
-
 button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
     background-color: #5c6bc0;
     color: white;
-    padding: 10px 20px;
     border: none;
     cursor: pointer;
-    font-size: 1em;
     border-radius: 5px;
 }
 
@@ -46,7 +64,5 @@ footer {
     background-color: #3949ab;
     color: white;
     padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    margin-top: 30px;
 }
