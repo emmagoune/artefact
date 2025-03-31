@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is it AI or Not?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Artefact</h1>
+        <p>Can you tell the difference between AI-generated and human-made content?</p>
+    </header>
+
+    <main>
+        <div class="comparison-container">
+            <div class="item">
+                <img src="image1.jpg" alt="AI or Human Image 1">
+                <button class="choose" onclick="checkAnswer(true)">AI</button>
+            </div>
+            <div class="item">
+                <img src="image2.jpg" alt="AI or Human Image 2">
+                <button class="choose" onclick="checkAnswer(false)">Human</button>
+            </div>
+        </div>
+        <div id="result"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Artefact</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
