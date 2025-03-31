@@ -15,12 +15,17 @@ function loadNewImages() {
     const isHumanLeft = Math.random() < 0.5;
     correctAnswer = isHumanLeft ? "left" : "right";
 
-    // Set images and ensure they are clickable
+    // Get image elements
     const leftImage = document.getElementById("leftImage");
     const rightImage = document.getElementById("rightImage");
 
+    // Set images
     leftImage.src = isHumanLeft ? humanImg : aiImg;
     rightImage.src = isHumanLeft ? aiImg : humanImg;
+
+    // Log paths to check if images are correctly assigned
+    console.log("Left Image Path:", leftImage.src);
+    console.log("Right Image Path:", rightImage.src);
 
     leftImage.onclick = () => checkAnswer("left");
     rightImage.onclick = () => checkAnswer("right");
@@ -39,4 +44,3 @@ function checkAnswer(choice) {
 
 // Load first set of images
 window.onload = loadNewImages;
-
