@@ -1,11 +1,11 @@
 body {
-    height: 100%; /* Ensure full height for the page */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-}
-
+} 
 .main-container {
     flex: 1; /* Pushes the footer to the bottom */
     display: flex;
@@ -30,7 +30,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px; /* Increased space between images and answer box */
+    margin-top: 20px;
     gap: 20px;
 }
 
@@ -52,8 +52,7 @@ h1 {
 
 /* Wrapper for result and next round button */
 .result-container {
-    margin-top: 20px;
-    text-align: center; /* Center the content */
+    margin-top: 40px; /* Adds more space below images */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,7 +108,5 @@ footer {
     background-color: #3949ab;
     color: white;
     padding: 10px;
-    text-align: center;
-    width: 100%;
-    margin-top: auto; /* Pushes footer to bottom */
+    margin-top: 30px;
 }
