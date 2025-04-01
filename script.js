@@ -37,14 +37,30 @@ function loadNewImages() {
 
 async function checkAnswer(choice) {
     let resultText = "";
+    let resultClass = "";
+    let link = "";
+
     if (choice === correctAnswer) {
         resultText = await loadExplanation("success_explanation", currentImageName);
+        resultClass = "correct"; // Green box for correct
     } else {
         resultText = await loadExplanation("failure_explanation", currentImageName);
+        resultClass = "wrong"; // Red box for wrong
     }
 
-    // Display the result text
-    document.getElementById("result").textContent = resultText;
+    // Check if the explanation contains a URL for a clickable link
+    // Example: If the explanation text contains a URL, wrap it in a clickable <a> tag
+    const urlPattern = /(https?:\/\/[^\s]+)/g;
+    const urlMatch = resultText.match(urlPattern);
+    
+    if (urlMatch) {
+        link = `<a href="${urlMatch[0]}" target="_blank">Click here for more info</a>`;
+        resultText = resultText.replace(urlPattern, ""); // Remove the URL from the explanation
+    }
+
+    // Apply result text and style
+    document.getElementById("result").innerHTML = `${resultText} ${link}`;
+    document.getElementById("result").className = resultClass;
 }
 
 async function loadExplanation(folder, imageName) {

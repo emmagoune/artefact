@@ -41,9 +41,34 @@ h1 {
     transform: scale(1.05);
 }
 
+/* Result box styling */
 #result {
-    font-size: 1.5em;
+    font-size: 1em;
     margin-top: 20px;
+    padding: 10px;
+    display: inline-block;
+    max-width: 80%;
+    word-wrap: break-word;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Styling for Correct answer (green background) */
+.correct {
+    background-color: #4caf50; /* Green */
+}
+
+/* Styling for Wrong answer (red background) */
+.wrong {
+    background-color: #f44336; /* Red */
+}
+
+/* Styling for clickable link inside result box */
+#result a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 button {
