@@ -66,15 +66,15 @@ h1 {
     font-size: 1.2em;
     padding: 15px;
     display: flex;
-    justify-content: center;
+    justify-content: center !important;
     align-items: center !important;
-    text-align: center;
+    text-align: center !important;
     max-width: 60%;
     word-wrap: break-word;
     border-radius: 8px;
     color: #fff;
     font-weight: bold;
-    flex-direction: column;
+    flex-direction: column !important;
     margin: 20px auto !important;
 }
 
@@ -113,7 +113,7 @@ footer {
     background-color: #3949ab;
     color: white;
     padding: 12px 24px;
-    position: fixed;
+    position: fixed !important;
     left: 0;
     bottom: 0;
     width: 100%;
