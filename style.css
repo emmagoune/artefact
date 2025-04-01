@@ -5,6 +5,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    height: 100%;
 } 
 
 .main-container {
@@ -61,6 +62,7 @@ h1 {
     justify-content: center;
     width: 100%;
     gap: 20px;
+    height: 100%; /* Make sure the container takes up the full height */
 }
 
 #result {
@@ -77,6 +79,7 @@ h1 {
     font-weight: bold;
     flex-direction: column !important;
     margin: 20px auto !important;
+    display: block; /* Make sure it's treated as a block element */
 }
 
 .correct {
