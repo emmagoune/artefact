@@ -39,10 +39,10 @@ h1 {
 }
 
 .image-choice {
-    width: 40vw;
-    max-width: 300px;
+    width: 50vw;
+    max-width: 400px;
     height: auto;
-    max-height: 70vh;
+    max-height: 80vh;
     object-fit: contain;
     border: 3px solid #333;
     cursor: pointer;
@@ -50,7 +50,7 @@ h1 {
 }
 
 .image-choice:hover {
-    border-color: #ff5722;
+    border-color: #22a7ff;
     transform: scale(1.05);
 }
 
