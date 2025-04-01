@@ -1,4 +1,4 @@
-const imagePairs = ["1.jpg", "3.jpg", "6.jpg"]; // List all file names 
+const imagePairs = ["1.jpg", "3.jpg", "6.jpg", "7.jpg", "4.jpg", "5.jpg"]; // List all file names 
 
 let correctAnswer = "";
 let currentImageName = ""; // To track the current image for file matching
