@@ -15,6 +15,7 @@ body {
     justify-content: center;
     text-align: center;
     padding-bottom: 20px;
+    height: 100vh; /* Make sure this container takes up the full height */
 }
 
 header {
