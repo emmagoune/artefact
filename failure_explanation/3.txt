@@ -1,0 +1,3 @@
+Oops! AI-generated images in Chagall’s style might look convincing, but they are typically created by models trained on datasets containing copyrighted artworks. Many artists are unaware that their works are being used to train AI systems without credit or compensation. This lack of transparency and ethical oversight in AI training could lead to legal battles over ownership and artistic rights.
+
+Learn more about copyright issues in AI model training: https://en.wikipedia.org/wiki/Artificial_intelligence_and_copyright
