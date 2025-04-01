@@ -40,9 +40,9 @@ h1 {
 
 .image-choice {
     width: 50vw;
-    max-width: 350px;
+    max-width: 300px;
     height: auto;
-    max-height: 60vh;
+    max-height: 50vh;
     object-fit: contain;
     border: 3px solid #333;
     cursor: pointer;
