@@ -59,6 +59,7 @@ h1 {
     align-items: center;
     justify-content: center;
     width: 100%;
+    gap: 20px; /* Adds spacing between result box and button */
 }
 
 /* Ensure the result box is properly centered */
@@ -75,6 +76,8 @@ h1 {
     border-radius: 8px;
     color: #fff;
     font-weight: bold;
+    flex-direction: column; /* Ensures text and button stack properly */
+    margin: 20px 0; /* Adds space above and below */
 }
 
 /* Styling for Correct answer (green background) */
@@ -114,6 +117,8 @@ button:hover {
 footer {
     background-color: #3949ab;
     color: white;
-    padding: 10px;
+    padding: 12px 24px; /* Slightly larger button for better aesthetics */
     margin-top: 50px;
+    display: block;
+    margin: 20px auto; /* Centers it horizontally */
 }
