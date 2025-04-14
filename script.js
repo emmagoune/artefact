@@ -5,12 +5,11 @@ let currentImageName = ""; // To track the current image for file matching
 
 function loadNewImages() {
     if (remainingPairs.length === 0) {
-        // All pairs have been used, show the "Congratulations" message
-        document.body.innerHTML = `
-            <div style="text-align: center; margin-top: 50px;">
-                <h1>Congratulations, you finished the game!</h1>
-                <button id="startOverButton" style="padding: 10px 20px; font-size: 1.2em; cursor: pointer;">Start Over</button>
-            </div>
+        // All pairs have been used, show the "Congratulations" message and Start Over button
+        const resultContainer = document.getElementById("result");
+        resultContainer.innerHTML = `
+            <h1>Congratulations, you finished the game!</h1>
+            <button id="startOverButton" style="padding: 10px 20px; font-size: 1.2em; cursor: pointer;">Start Over</button>
         `;
         document.getElementById("startOverButton").onclick = startOver;
         return;
@@ -107,5 +106,4 @@ function startOver() {
 // Load first set of images
 window.onload = () => {
     loadNewImages(); // Load the first set of images
-    document.getElementById("startOverButton").onclick = startOver; // Attach the start over functionality
 };

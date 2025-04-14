@@ -20,6 +20,17 @@ body {
     box-sizing: border-box; /* Ensure padding is included in height calculations */
 }
 
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: calc(100vh - 100px); /* Ensure main content fits above the footer */
+}
+
 header {
     background-color: #5c6bc0;
     color: white;
@@ -38,14 +49,15 @@ h1 {
     gap: 20px; /* Add spacing between images */
     margin-top: 20px;
     width: 100%; /* Ensure the container spans the full width */
+    max-width: 800px; /* Optional: Limit the container width */
 }
 
 .image-choice {
     width: 40vw; /* Set the width to 40% of the viewport width */
     max-width: 300px; /* Ensure the image doesn't exceed 300px in width */
-    height: auto; /* Maintain the aspect ratio */
-    max-height: 50vh; /* Ensure the image doesn't exceed 50% of the viewport height */
-    object-fit: contain; /* Ensure the image fits within the bounds without distortion */
+    height: 40vh; /* Set the height to 40% of the viewport height */
+    max-height: 300px; /* Ensure the image doesn't exceed 300px in height */
+    object-fit: cover; /* Ensure the image fills the container while maintaining aspect ratio */
     border: 3px solid #333; /* Keep the border */
     cursor: pointer;
     transition: transform 0.2s ease-in-out; /* Smooth hover effect */
@@ -119,7 +131,7 @@ footer {
     background-color: #3949ab;
     color: white;
     padding: 12px 24px;
-    position: relative; /* Change from fixed to relative */
+    position: relative; /* Ensure footer is part of the document flow */
     width: 100%;
     text-align: center;
     margin-top: 20px; /* Add spacing above the footer */
