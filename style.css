@@ -5,19 +5,19 @@ body {
     text-align: center;
     margin: 0;
     min-height: 100vh; /* Allow scrolling if content exceeds viewport height */
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .main-container {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Changed to start content at the top */
+    justify-content: flex-start; /* Start content at the top */
     text-align: center;
-    padding-bottom: 20px;
-    min-height: 100%; /* Ensure this container is at least the height of the viewport */
+    padding: 20px; /* Add padding for spacing */
+    min-height: 100vh; /* Allow the container to grow beyond the viewport height */
+    box-sizing: border-box; /* Ensure padding is included in height calculations */
 }
 
 header {
@@ -35,19 +35,20 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 20px; /* Add spacing between images */
     margin-top: 20px;
-    gap: 20px;
+    width: 100%; /* Ensure the container spans the full width */
 }
 
 .image-choice {
-    width: 50vw;
-    max-width: 300px;
-    height: auto;
-    max-height: 50vh;
-    object-fit: contain;
-    border: 3px solid #333;
+    width: 40vw; /* Set the width to 40% of the viewport width */
+    max-width: 300px; /* Ensure the image doesn't exceed 300px in width */
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 50vh; /* Ensure the image doesn't exceed 50% of the viewport height */
+    object-fit: contain; /* Ensure the image fits within the bounds without distortion */
+    border: 3px solid #333; /* Keep the border */
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
 }
 
 .image-choice:hover {
@@ -118,10 +119,9 @@ footer {
     background-color: #3949ab;
     color: white;
     padding: 12px 24px;
-    position: fixed !important;
-    left: 0;
-    bottom: 0;
+    position: relative; /* Change from fixed to relative */
     width: 100%;
     text-align: center;
-    margin: 0;
+    margin-top: 20px; /* Add spacing above the footer */
 }
+

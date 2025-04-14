@@ -93,19 +93,19 @@ async function loadExplanation(folder, imageName) {
 }
 
 function startOver() {
-    // Reset the game
+    // Reset the game state
     remainingPairs = [...imagePairs]; // Reset the remaining pairs
-    document.body.innerHTML = `
-        <div id="main-container">
-            <div id="comparison-container">
-                <img id="leftImage" class="image-choice" />
-                <img id="rightImage" class="image-choice" />
-            </div>
-            <div id="result" class="result-container"></div>
-        </div>
-    `;
-    loadNewImages(); // Start the game again
+    correctAnswer = ""; // Clear the correct answer
+    currentImageName = ""; // Clear the current image name
+
+    // Clear the result text and reset the images
+    document.getElementById("result").textContent = ""; // Clear the result box
+    document.getElementById("result").className = ""; // Reset result styles
+    loadNewImages(); // Load new images
 }
 
 // Load first set of images
-window.onload = loadNewImages;
+window.onload = () => {
+    loadNewImages(); // Load the first set of images
+    document.getElementById("startOverButton").onclick = startOver; // Attach the start over functionality
+};
