@@ -53,14 +53,15 @@ h1 {
 }
 
 .image-choice {
-    width: 40vw; /* Set the width to 40% of the viewport width */
-    max-width: 300px; /* Ensure the image doesn't exceed 300px in width */
-    height: 40vh; /* Set the height to 40% of the viewport height */
-    max-height: 300px; /* Ensure the image doesn't exceed 300px in height */
-    object-fit: cover; /* Ensure the image fills the container while maintaining aspect ratio */
+    width: 50vw; /* Increase the width to 50% of the viewport width */
+    max-width: 400px; /* Increase the maximum width */
+    height: 50vh; /* Increase the height to 50% of the viewport height */
+    max-height: 400px; /* Increase the maximum height */
+    object-fit: contain; /* Ensure the entire image is visible without cropping */
     border: 3px solid #333; /* Keep the border */
     cursor: pointer;
     transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+    background-color: #fff; /* Optional: Add a background color to fill empty space */
 }
 
 .image-choice:hover {
