@@ -9,21 +9,23 @@
 </head>
 <body>
     <header>
-        <h1>Artefact v.0.10</h1>
+        <h1>Artefact v.0.11</h1>
         <p>Click on the image that you think is **human-made**.</p>
     </header>
 
     <main>
-        <div class="comparison-container">
-            <img id="leftImage" class="image-choice" onclick="checkAnswer('left')" alt="Left Image">
-            <img id="rightImage" class="image-choice" onclick="checkAnswer('right')" alt="Right Image">
+        <div id="main-container">
+            <div id="comparison-container">
+                <img id="leftImage" class="image-choice" />
+                <img id="rightImage" class="image-choice" />
+            </div>
+            <div id="result" class="result-container"></div>
         </div>
-        <div id="result"></div>
         <button onclick="loadNewImages()">Next Round</button>
     </main>
 
     <footer>
-        <p>&copy; 2025 Artefact v0.10 by Emma Gouné</p>
+        <p>&copy; 2025 Artefact v0.11 by Emma Gouné</p>
     </footer>
 </body>
 </html>
