@@ -6,17 +6,18 @@ body {
     margin: 0;
     min-height: 100vh; /* Allow scrolling if content exceeds viewport height */
     overflow-x: hidden;
-} 
+    overflow-y: auto; /* Enable vertical scrolling */
+}
 
 .main-container {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Changed to start content at the top */
     text-align: center;
     padding-bottom: 20px;
-    height: 100vh; /* Make sure this container takes up the full height */
+    min-height: 100%; /* Ensure this container is at least the height of the viewport */
 }
 
 header {
@@ -62,7 +63,7 @@ h1 {
     justify-content: center;
     width: 100%;
     gap: 20px;
-    height: 100%; /* Make sure the container takes up the full height */
+    min-height: 100%; /* Ensure the result container also takes up full height */
 }
 
 #result {
