@@ -2,13 +2,16 @@ const imagePairs = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg
 let remainingPairs = [...imagePairs]; // Copy of imagePairs to track unused pairs
 let correctAnswer = "";
 let currentImageName = ""; // To track the current image for file matching
+let correctCount = 0; // Track the number of correct answers
 
 function loadNewImages() {
     if (remainingPairs.length === 0) {
         // All pairs have been used, show the "Congratulations" message and Start Over button
         const resultContainer = document.getElementById("result");
+        resultContainer.className = ""; // Clear any styling
         resultContainer.innerHTML = `
             <h1>Congratulations, you finished the game!</h1>
+            <p>You got <strong>${correctCount}</strong> out of ${imagePairs.length} correct.</p>
             <button id="startOverButton" style="padding: 10px 20px; font-size: 1.2em; cursor: pointer;">Start Over</button>
         `;
         document.getElementById("startOverButton").onclick = startOver;
@@ -17,8 +20,8 @@ function loadNewImages() {
 
     // Pick a random pair from the remaining pairs
     const randomIndex = Math.floor(Math.random() * remainingPairs.length);
-    currentImageName = remainingPairs[randomIndex]; // Store current image name
-    remainingPairs.splice(randomIndex, 1); // Remove the used pair from the list
+    currentImageName = remainingPairs[randomIndex];
+    remainingPairs.splice(randomIndex, 1);
 
     // Construct paths
     const humanImg = `human_images/${currentImageName}`;
@@ -32,19 +35,18 @@ function loadNewImages() {
     const leftImage = document.getElementById("leftImage");
     const rightImage = document.getElementById("rightImage");
 
-    // Set images
+    // Set image sources
     leftImage.src = isHumanLeft ? humanImg : aiImg;
     rightImage.src = isHumanLeft ? aiImg : humanImg;
 
-    // Log paths to check if images are correctly assigned
-    console.log("Left Image Path:", leftImage.src);
-    console.log("Right Image Path:", rightImage.src);
-
+    // Assign click handlers
     leftImage.onclick = () => checkAnswer("left");
     rightImage.onclick = () => checkAnswer("right");
 
-    // Reset result text
-    document.getElementById("result").textContent = "";
+    // Reset result box
+    const resultEl = document.getElementById("result");
+    resultEl.textContent = "";
+    resultEl.className = "";
 }
 
 async function checkAnswer(choice) {
@@ -53,36 +55,37 @@ async function checkAnswer(choice) {
     let link = "";
 
     if (choice === correctAnswer) {
+        correctCount++; // Increase correct count
         resultText = await loadExplanation("success_explanation", currentImageName);
-        resultClass = "correct"; // Green box for correct
+        resultClass = "correct"; // Green box
     } else {
         resultText = await loadExplanation("failure_explanation", currentImageName);
-        resultClass = "wrong"; // Red box for wrong
+        resultClass = "wrong"; // Red box
     }
 
-    // Check if the explanation contains a URL for a clickable link
+    // Extract link if available
     const urlPattern = /(https?:\/\/[^\s]+)/g;
     const urlMatch = resultText.match(urlPattern);
 
     if (urlMatch) {
         link = `<a href="${urlMatch[0]}" target="_blank">Click here for more info</a>`;
-        resultText = resultText.replace(urlPattern, ""); // Remove the URL from the explanation
+        resultText = resultText.replace(urlPattern, ""); // Remove URL from explanation
     }
 
-    // Apply result text and style
-    document.getElementById("result").innerHTML = `${resultText} ${link}`;
-    document.getElementById("result").className = resultClass;
+    // Update result display
+    const resultBox = document.getElementById("result");
+    resultBox.innerHTML = `${resultText} ${link}`;
+    resultBox.className = resultClass;
 }
 
 async function loadExplanation(folder, imageName) {
-    const fileName = imageName.replace('.jpg', '.txt'); // Replace .jpg with .txt to match file name
+    const fileName = imageName.replace('.jpg', '.txt');
     const filePath = `${folder}/${fileName}`;
 
     try {
         const response = await fetch(filePath);
         if (response.ok) {
-            const text = await response.text();
-            return text;
+            return await response.text();
         } else {
             return "Default answer text: Could not load explanation.";
         }
@@ -92,18 +95,21 @@ async function loadExplanation(folder, imageName) {
 }
 
 function startOver() {
-    // Reset the game state
-    remainingPairs = [...imagePairs]; // Reset the remaining pairs
-    correctAnswer = ""; // Clear the correct answer
-    currentImageName = ""; // Clear the current image name
+    // Reset game state
+    remainingPairs = [...imagePairs];
+    correctAnswer = "";
+    currentImageName = "";
+    correctCount = 0;
 
-    // Clear the result text and reset the images
-    document.getElementById("result").textContent = ""; // Clear the result box
-    document.getElementById("result").className = ""; // Reset result styles
-    loadNewImages(); // Load new images
+    // Reset result box
+    const resultBox = document.getElementById("result");
+    resultBox.textContent = "";
+    resultBox.className = "";
+
+    loadNewImages();
 }
 
-// Load first set of images
+// Load first round on page load
 window.onload = () => {
-    loadNewImages(); // Load the first set of images
+    loadNewImages();
 };
