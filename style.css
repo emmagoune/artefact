@@ -53,9 +53,9 @@ h1 {
 }
 
 .image-choice {
-    width: 70vw; /* Increase the width to 50% of the viewport width */
+    width: 60vw; /* Increase the width to 50% of the viewport width */
     max-width: 600px; /* Increase the maximum width */
-    height: 70vh; /* Increase the height to 50% of the viewport height */
+    height: 60vh; /* Increase the height to 50% of the viewport height */
     max-height: 600px; /* Increase the maximum height */
     object-fit: contain; /* Ensure the entire image is visible without cropping */
     border: 2px solid #ffffff; /* Keep the border */
