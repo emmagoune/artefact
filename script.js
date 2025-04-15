@@ -10,8 +10,8 @@ function loadNewImages() {
         const resultContainer = document.getElementById("result");
         resultContainer.className = ""; // Clear any styling
         resultContainer.innerHTML = `
-            <h1>Congratulations, you finished the game!</h1>
-            <p>You got <strong>${correctCount}</strong> out of ${imagePairs.length} correct.</p>
+            <h1 style="color: blue;">Congratulations, you finished the game!</h1>
+            <p style="color: blue;">You got <strong>${correctCount}</strong> out of ${imagePairs.length} correct.</p>
             <button id="startOverButton" style="padding: 10px 20px; font-size: 1.2em; cursor: pointer;">Start Over</button>
         `;
         document.getElementById("startOverButton").onclick = startOver;

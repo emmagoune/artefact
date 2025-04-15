@@ -46,19 +46,19 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px; /* Add spacing between images */
-    margin-top: 20px;
+    gap: 40px; /* Add spacing between images */
+    margin-top: 40px;
     width: 100%; /* Ensure the container spans the full width */
     max-width: 800px; /* Optional: Limit the container width */
 }
 
 .image-choice {
-    width: 50vw; /* Increase the width to 50% of the viewport width */
-    max-width: 400px; /* Increase the maximum width */
-    height: 50vh; /* Increase the height to 50% of the viewport height */
-    max-height: 400px; /* Increase the maximum height */
+    width: 70vw; /* Increase the width to 50% of the viewport width */
+    max-width: 600px; /* Increase the maximum width */
+    height: 70vh; /* Increase the height to 50% of the viewport height */
+    max-height: 600px; /* Increase the maximum height */
     object-fit: contain; /* Ensure the entire image is visible without cropping */
-    border: 3px solid #333; /* Keep the border */
+    border: 2px solid #ffffff; /* Keep the border */
     cursor: pointer;
     transition: transform 0.2s ease-in-out; /* Smooth hover effect */
     background-color: #fff; /* Optional: Add a background color to fill empty space */
