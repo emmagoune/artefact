@@ -23,7 +23,7 @@ function loadNewImages() {
 
         // Display the final message and the Start Over button
         const resultContainer = document.getElementById("result");
-        resultContainer.className = "congrats"; 
+        resultContainer.className = "congrats"; // Apply the blue background style
         resultContainer.innerHTML = `
             <h1>Congratulations, you finished the game!</h1>
             <p>${finalMessage}</p>
