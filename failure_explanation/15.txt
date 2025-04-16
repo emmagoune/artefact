@@ -1,0 +1,4 @@
+Oops! AI can look confident, but it often gets things wrong. Whether it’s a medical diagnosis, legal advice, or identifying a toxic plant like this poisonous mushroom, one error can have serious consequences.
+AI only predicts patterns, it should never replace human judgment in decisions where the cost of error is real and irreversible.
+
+Learn more about AI in healthcare: https://www.emjreviews.com/radiology/article/the-good-the-bad-and-the-ugly-of-ai-in-medical-imaging-j140125/
