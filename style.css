@@ -33,12 +33,14 @@ main {
 
 header {
     background-color: #5c6bc0;
-    color: white;
+    color: white; 
     padding: 20px;
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 3em;
+    color: #003366;         /* Dark blue */
+    
 }
 
 .comparison-container {
@@ -141,7 +143,7 @@ footer {
 /* Final message style */
 .congrats h1,
 .congrats p {
-    color: #5c6bc0; /* Blue */
+    color: #003366;
     background-color: white !important;
     text-align: center;
 }
@@ -149,7 +151,7 @@ footer {
 /* Optional polish */
 .congrats {
     background-color: white;     /* <--- this fixes the issue */
-    color: #333;
+    color: #003366;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
