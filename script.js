@@ -23,12 +23,12 @@ function loadNewImages() {
 
         // Display the final message and the Start Over button
         const resultContainer = document.getElementById("result");
-        resultContainer.classList.add("congrats");
-        resultContainer.innerHTML = `
+        resultContainer.innerHTML = `<div class="congrats">
             <h1>Congratulations, you finished the game!</h1>
             <p>${finalMessage}</p>
             <p>You got <strong>${correctCount}</strong> out of ${imagePairs.length} correct.</p>
-            <button id="startOverButton" style="padding: 10px 20px; font-size: 1.2em; cursor: pointer;">Start Over</button>
+        </div>
+        <button id="startOverButton" style="padding: 10px 20px; font-size: 1.2em; cursor: pointer;">Start Over</button>
         `;
         document.getElementById("startOverButton").onclick = startOver;
         return;
