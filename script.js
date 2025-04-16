@@ -6,12 +6,28 @@ let correctCount = 0; // Track the number of correct answers
 
 function loadNewImages() {
     if (remainingPairs.length === 0) {
-        // All pairs have been used, show the "Congratulations" message and Start Over button
+        // All pairs have been used, calculate the score
+        const scorePercentage = (correctCount / imagePairs.length) * 100;
+        let finalMessage = "";
+
+        // Determine the message based on the score
+        if (scorePercentage === 100) {
+            finalMessage = "You're a true expert! Keep engaging critically with AI and its impacts.";
+        } else if (scorePercentage >= 80) {
+            finalMessage = "You're on the right track! Explore the resources linked in each round to deepen your understanding.";
+        } else if (scorePercentage >= 50) {
+            finalMessage = "The topics you missed are worth revisiting. Stay curious and keep learning about AI’s real-world effects!";
+        } else {
+            finalMessage = "The topics you missed are worth revisiting. Take time to explore the issues and stay informed!";
+        }
+
+        // Display the final message and the Start Over button
         const resultContainer = document.getElementById("result");
-        resultContainer.className = ""; // Clear any styling
+        resultContainer.className = "congrats"; // Apply the blue background style
         resultContainer.innerHTML = `
-            <h1 style="color: blue;">Congratulations, you finished the game!</h1>
-            <p style="color: blue;">You got <strong>${correctCount}</strong> out of ${imagePairs.length} correct.</p>
+            <h1>Congratulations, you finished the game!</h1>
+            <p>${finalMessage}</p>
+            <p>You got <strong>${correctCount}</strong> out of ${imagePairs.length} correct.</p>
             <button id="startOverButton" style="padding: 10px 20px; font-size: 1.2em; cursor: pointer;">Start Over</button>
         `;
         document.getElementById("startOverButton").onclick = startOver;
@@ -46,7 +62,7 @@ function loadNewImages() {
     // Reset result box
     const resultEl = document.getElementById("result");
     resultEl.textContent = "";
-    resultEl.className = "";
+    resultEl.className = ""; // Clear any previous styles
 }
 
 async function checkAnswer(choice) {
