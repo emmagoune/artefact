@@ -140,7 +140,7 @@ footer {
 
 .congrats h1,
 .congrats p {
-    color: #5c6bc0; /* Blue text */
+    color: #000000; /* Blue text */
     background-color: #eeeef1; /* Blue background */
     font-size: 1.2em; /* Slightly larger font size */
     text-align: center; /* Center-align the text */

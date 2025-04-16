@@ -87,7 +87,8 @@ async function checkAnswer(choice) {
         link = `<a href="${urlMatch[0]}" target="_blank">Click here for more info</a>`;
         resultText = resultText.replace(urlPattern, ""); // Remove URL from explanation
     }
-
+    // Replace newline characters with <br> for proper formatting
+    resultText = resultText.replace(/\n/g, "<br>");
     // Update result display
     const resultBox = document.getElementById("result");
     resultBox.innerHTML = `${resultText} ${link}`;
