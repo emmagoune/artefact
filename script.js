@@ -20,9 +20,12 @@ function loadNewImages() {
         } else {
             finalMessage = "The topics you missed are worth revisiting. Take time to explore the issues and stay informed!";
         }
-
+        
         // Display the final message and the Start Over button
         const resultContainer = document.getElementById("result");
+        // Clear any previous background or styles
+        resultContainer.className = "";
+        resultContainer.style.backgroundColor = ""; // Optional: manually clear inline background color
         resultContainer.innerHTML = `<div class="congrats">
             <h1>Congratulations, you finished the game!</h1>
             <p>${finalMessage}</p>
