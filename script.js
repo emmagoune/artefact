@@ -1,4 +1,4 @@
-const imagePairs = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.txt", "13.txt", "14.txt", "15.txt"]; // List all file names
+const imagePairs = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg"]; // List all file names
 let remainingPairs = [...imagePairs]; // Copy of imagePairs to track unused pairs
 let correctAnswer = "";
 let currentImageName = ""; // To track the current image for file matching
@@ -23,6 +23,7 @@ function loadNewImages() {
 
         // Display the final message and the Start Over button
         const resultContainer = document.getElementById("result");
+        resultContainer.classList.add("congrats");
         resultContainer.className = "congrats"; // Apply the blue text style
         resultContainer.innerHTML = `
             <h1>Congratulations, you finished the game!</h1>
