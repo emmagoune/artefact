@@ -139,7 +139,9 @@ footer {
 }
 
 .congrats {
-    color: rgb(77, 79, 196); /* White text for contrast */
-    
+    color: #5c6bc0; /* Blue text */
+    font-size: 1.2em; /* Slightly larger font size */
+    text-align: center; /* Center-align the text */
+    margin-top: 20px; /* Add spacing above the message */
 }
 
