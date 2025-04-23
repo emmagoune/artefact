@@ -37,6 +37,10 @@ function loadNewImages() {
 }
 
 async function checkAnswer(choice) {
+    // Prevent further clicks
+    document.getElementById("leftImage").onclick = null;
+    document.getElementById("rightImage").onclick = null;
+    
     let resultText = "";
     let resultClass = "";
     let link = "";
