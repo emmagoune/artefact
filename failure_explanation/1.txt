@@ -1,4 +1,3 @@
 Oops! AI can convincingly mimic Van Gogh’s style, but it does so by analyzing patterns, not by experiencing creativity. This raises concerns in AI governance, as mass production of machine-generated art risks overshadowing human artists and complicates copyright laws, potentially devaluing genuine artistic expression.
 
-Read more about copyright laws and AI-generated content: 
-https://www.wipo.int/en/web/frontier-technologies/artificial-intelligence/policy
+Read more about copyright laws and AI-generated content: https://www.wipo.int/en/web/frontier-technologies/artificial-intelligence/policy

@@ -1,4 +1,3 @@
 Nice work! Human messages reflect lived experiences and emotional nuance. AI-generated texts might sound caring, but they can be used to spread falsehoods or trigger emotional responses for manipulation.
 
-Read the full research paper here: 
-https://arxiv.org/pdf/2503.23674
+Read the full research paper here: https://arxiv.org/pdf/2503.23674
