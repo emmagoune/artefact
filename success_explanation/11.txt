@@ -1,3 +1,4 @@
 Nice job! By opting for traditional methods and real artists, you help reduce the environmental impact associated with excessive computational demands.
 
-Learn about the environmental impact of AI trends: https://oecd.ai/en/wonk/the-hidden-cost-of-ai-energy-and-water-footprint
+Learn about the environmental impact of AI trends: 
+https://oecd.ai/en/wonk/the-hidden-cost-of-ai-energy-and-water-footprint

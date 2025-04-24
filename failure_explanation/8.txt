@@ -1,3 +1,4 @@
  Oops! AI can fake emotional tones to influence your reactions. These tools can be weaponized to manipulate public opinion or personal decisions.
  
- Learn more about AI’s impact on misinformation: https://www.technologyreview.com/2023/10/04/1080801/generative-ai-boosting-disinformation-and-propaganda-freedom-house/
+ Learn more about AI’s impact on misinformation: 
+ https://www.technologyreview.com/2023/10/04/1080801/generative-ai-boosting-disinformation-and-propaganda-freedom-house/

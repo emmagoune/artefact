@@ -1,3 +1,4 @@
 Nice job! While AI can mimic artistic styles, it does so by training on real human-made content that are often scraped from the internet without consent. Artists aren’t compensated or credited when their work becomes part of a training dataset, raising serious concerns around ownership, ethics, and transparency.
 
-Check Göktuğ Gürellier's art here: https://www.artstation.com/goktugg
+Check Göktuğ Gürellier's art here: 
+https://www.artstation.com/goktugg
