@@ -132,4 +132,19 @@ function startOver() {
     loadNewImages();
 }
 
+function startGame() {
+    // Hide the start screen
+    document.getElementById("startScreen").style.display = "none";
+
+    // Show the game content
+    document.querySelector("header").style.display = "block";
+    document.querySelector("main").style.display = "block";
+    document.querySelector("footer").style.display = "block";
+
+    // Start the game
+    loadNewImages();
+}
+
+document.getElementById("startGameButton").onclick = startGame;
+
 window.onload = loadNewImages;

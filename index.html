@@ -8,12 +8,21 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
+    <div id="startScreen" style="text-align: center; padding: 20px;">
+        <h1>Welcome to ARTEFACT</h1>
+        <p style="font-size: 1.2em;">
+            Test your ability to distinguish between human-made and AI-generated images. 
+            Click "Start Game" to begin!
+        </p>
+        <button id="startGameButton" style="padding: 10px 20px; font-size: 1.2em; cursor: pointer;">Start Game</button>
+    </div>
+
+    <header style="display: none;">
         <h1>ARTEFACT</h1>
-        <p style="font-size: 2em;">Click on the image that you think represent work done by <strong>humans</strong>.</p>
+        <p style="font-size: 2em;">Click on the image that you represents work done by <strong>humans</strong>.</p>
     </header>
 
-    <main>
+    <main style="display: none;">
         <div id="main-container">
             <div id="comparison-container">
                 <img id="leftImage" class="image-choice" />
@@ -25,7 +34,7 @@
         <button onclick="loadNewImages()">Next Round</button>
     </main>
 
-    <footer>
+    <footer style="display: none;">
         <p>&copy; 2025 ARTEFACT by Emma Gouné</p>
     </footer>
 </body>
