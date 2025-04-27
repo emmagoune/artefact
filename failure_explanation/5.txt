@@ -1,3 +1,3 @@
-Oops! While AI-generated faces may look authentic, they are increasingly being used to deceive and manipulate. Deepfake technology allows malicious actors to create fake social media profiles, perpetuate scams, and fuel misinformation campaigns. Unfortunately, these AI-generated images are often targeted at minority groups.
+Oops! While AI-generated faces may look authentic, they are increasingly being used to deceive and manipulate. Deepfake technology allows malicious actors to create fake social media profiles, scams, and fuel misinformation campaigns. Additionally, AI-generated images are often biased and perpetuate discrimination and sexism online. 
 
 Understand the risks of deepfakes: https://industrywired.com/artificial-intelligence/blurred-lines-of-reality-how-deepfakes-are-threatening-online-security-8906130?fbclid=IwZXh0bgNhZW0CMTEAAR3K75B-GVUiB9jHJM5EAmqeejSzXAXPP_anI1VrLrZ3h32qvzpTIM1VlzU_aem_GF38fNrpilGJUPCJ9_815Q

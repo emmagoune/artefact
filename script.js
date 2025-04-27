@@ -99,6 +99,12 @@ function showFinalMessage() {
     resultBox.textContent = "";
     resultBox.className = "";
 
+    // Hide the "Next Round" button
+    const nextRoundButton = document.querySelector("button[onclick='loadNewImages()']");
+    if (nextRoundButton) {
+        nextRoundButton.style.display = "none";
+    }
+
     // Show the final screen
     const finalMessageBox = document.getElementById("finalMessage");
     finalMessageBox.style.display = "block";
@@ -106,7 +112,7 @@ function showFinalMessage() {
         <div class="congrats">
             <h1>Congratulations, you finished the game!</h1>
             <p>${finalMessage}</p>
-            <p>You got <strong>${correctCount}</strong> out of ${imagePairs.length} correct.</p>
+            <p>You scored <strong>${correctCount}</strong> out of ${imagePairs.length}.</p>
         </div>
         <button id="startOverButton" style="padding: 10px 20px; font-size: 1.2em; cursor: pointer;">Start Over</button>
     `;
